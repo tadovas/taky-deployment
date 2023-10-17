@@ -1,0 +1,12 @@
+version: '3.8'
+services:
+  taky:
+    build:
+      context: .
+    ports:
+      - "8087:8087"
+    restart: always
+    volumes:
+      - "./taky/home:/home/taky"
+      - "./taky/etc:/etc/taky"
+      - "./taky/var:/var/taky"
